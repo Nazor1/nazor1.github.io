@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@media screen and (max-width:900px), screen and (max-height:800px) {
+    .welc {font-size:40px;}
+    .welcrbu {font-size: 40px;}
+    }
+    @media screen and (min-width:900px), screen and (min-height:800px) {
+    .welc {font-size:60px;}
+    .welcrbu {font-size: 60px;}
+    }
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #111111;
+}
+
+.main{
+    position: relative;
+    min-height: 100vh;
+}
+
+.logo{
+    position: relative;
+    width: 60px;
+    height: 64px;
+}
+
+
+.navigation{
+    position: fixed;
+    width: 350px;
+    height: 70px;
+    top: 10px;
+    z-index: 3;
+}
+.navigation ul
+{
+    display: flex;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+}
+.navigation ul li a .icon{
+    position: relative;
+    line-height: 70px;
+    transition: 0.5px;
+    font-size: 30px;
+}
+.navigation ul li.active a .icon{
+    font-size: 26px;
+    transform: translateY(-5px);
+    transition: 0.15s;
+    color: #111111;
+}
+.navigation ul li a .text{
+    position: absolute;
+    font-size: 14px;
+    color: #fff;
+    bottom: 10px;
+    font-weight: 600;
+    transition: 0.25s;
+    transform: scale(0);
+}
+.navigation ul li.active a .text
+{
+    transform: scale(1);
+    color: #111111;
+}
+.indicator{
+    position: absolute;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.navigation ul li:nth-child(1).active ~ .indicator{
+    background: #6e73ff;
+    transform: translateX(calc(70px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+    background: #557CC4;
+    transform: translateX(calc(70px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+    background: #0F9454;
+    transform: translateX(calc(70px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+    background: #d68800;
+    transform: translateX(calc(70px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+    background: #ff7070;
+    transform: translateX(calc(70px * 4));
+}
+
+.under{
+    position: absolute;
+    height: 37vh;
+    z-index: 1;
+}
+
+.title{
+    z-index: 2;
+    position: absolute;
+    top: 30vh;
+    color: #fff;
+    text-align: center;
+}
+
+.welc{
+    font-weight: bolder;
+}
+.welcrbu {
+    background-image: linear-gradient(to bottom right, #B453FD, #0690CD);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }

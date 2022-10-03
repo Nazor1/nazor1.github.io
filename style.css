@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 @media screen and (max-width:900px), screen and (max-height:800px) {
-    .welc {font-size:40px;}
-    .welcrbu {font-size: 40px;}
+    .auta {font-size:40px;}
+    .waltera {font-size: 40px;}
     }
     @media screen and (min-width:900px), screen and (min-height:800px) {
-    .welc {font-size:60px;}
-    .welcrbu {font-size: 60px;}
+    .auta {font-size:140px;}
+    .waltera {font-size: 140px;}
     }
 *
 {
@@ -14,128 +14,79 @@
     box-sizing: border-box;
     font-family: 'Varela Round', sans-serif;
 }
-body{
+
+body, html{
+    align-items: center;
+    background: #222222;
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+}
+
+
+main {
+    height: 100%;
+    width: 100%;
+}
+  
+section {
+    height: 100%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background: #111111;
+}
+  
+section:nth-child(1) {
+    color: white;
+}
+  
+section:nth-child(2) {
+    background: #202020;
+    color: white;
 }
 
-.main{
-    position: relative;
-    min-height: 100vh;
-}
+/* ====== SECTION 1 ====== */
 
-.logo{
-    position: relative;
-    width: 60px;
-    height: 64px;
-}
-
-
-.navigation{
-    position: fixed;
-    width: 350px;
-    height: 70px;
-    top: 10px;
-    z-index: 3;
-}
-.navigation ul
-{
-    display: flex;
-}
-.navigation ul li{
-    position: relative;
-    list-style: none;
-    width: 70px;
-    height: 70px;
-    z-index: 1;
-}
-.navigation ul li a{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: #fff;
-    text-align: center;
-}
-.navigation ul li a .icon{
-    position: relative;
-    line-height: 70px;
-    transition: 0.5px;
-    font-size: 30px;
-}
-.navigation ul li.active a .icon{
-    font-size: 26px;
-    transform: translateY(-5px);
-    transition: 0.15s;
-    color: #111111;
-}
-.navigation ul li a .text{
+.walt{
     position: absolute;
-    font-size: 14px;
-    color: #fff;
-    bottom: 10px;
-    font-weight: 600;
-    transition: 0.25s;
-    transform: scale(0);
-}
-.navigation ul li.active a .text
-{
-    transform: scale(1);
-    color: #111111;
-}
-.indicator{
-    position: absolute;
-    left: 0;
-    width: 70px;
-    height: 70px;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-.navigation ul li:nth-child(1).active ~ .indicator{
-    background: #6e73ff;
-    transform: translateX(calc(70px * 0));
-}
-.navigation ul li:nth-child(2).active ~ .indicator{
-    background: #557CC4;
-    transform: translateX(calc(70px * 1));
-}
-.navigation ul li:nth-child(3).active ~ .indicator{
-    background: #0F9454;
-    transform: translateX(calc(70px * 2));
-}
-.navigation ul li:nth-child(4).active ~ .indicator{
-    background: #d68800;
-    transform: translateX(calc(70px * 3));
-}
-.navigation ul li:nth-child(5).active ~ .indicator{
-    background: #ff7070;
-    transform: translateX(calc(70px * 4));
-}
-
-.under{
-    position: absolute;
-    height: 37vh;
-    z-index: 1;
-}
-
-.title{
-    z-index: 2;
-    position: absolute;
-    top: 30vh;
-    color: #fff;
     text-align: center;
 }
 
-.welc{
+.ww{
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 70%;
+}
+
+.auta{
     font-weight: bolder;
+    color: #fff;
+    z-index: 1;
 }
-.welcrbu {
-    background-image: linear-gradient(to bottom right, #B453FD, #0690CD);
+.waltera {
+    background-image: linear-gradient(to bottom right, #369457, #29773e);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-  }
+    z-index: 1;
+}
+
+/* ====== SECTION 2 ====== */
+
+.s2left{
+    width: 40%;
+    float: left;
+}
+
+.s2p1{
+    font-size: 50px;
+    text-overflow: wrap;
+    font-weight: 900;
+}
